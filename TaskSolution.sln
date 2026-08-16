@@ -1,9 +1,53 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37411.7 d17.14
+VisualStudioVersion = 17.14.37411.7
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compression", "src\Compression\Compression.csproj", "{D13B6D39-7183-4254-A0EB-B7BDEFF7F97D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compression.Tests", "tests\Compression.Tests\Compression.Tests.csproj", "{120EE56C-9A1B-43E8-B1B1-5DBFDC723D81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountServer", "src\CountServer\CountServer.csproj", "{E97362A9-3F28-4663-9F57-D6A7017708D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountServer.Tests", "tests\CountServer.Tests\CountServer.Tests.csproj", "{E6B753B0-2460-41DF-A5ED-972CF9A4E632}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor", "src\LogProcessor\LogProcessor.csproj", "{1F190931-EEBB-454C-8AC8-56B048D251B1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogProcessor.Tests", "tests\LogProcessor.Tests\LogProcessor.Tests.csproj", "{72A37BF6-927C-4BCE-AF1A-21941E067153}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Элементы решения", "Элементы решения", "{754FC069-D67B-A9D7-50A1-8D1CA196D8F1}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D13B6D39-7183-4254-A0EB-B7BDEFF7F97D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13B6D39-7183-4254-A0EB-B7BDEFF7F97D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13B6D39-7183-4254-A0EB-B7BDEFF7F97D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13B6D39-7183-4254-A0EB-B7BDEFF7F97D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{120EE56C-9A1B-43E8-B1B1-5DBFDC723D81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{120EE56C-9A1B-43E8-B1B1-5DBFDC723D81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{120EE56C-9A1B-43E8-B1B1-5DBFDC723D81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{120EE56C-9A1B-43E8-B1B1-5DBFDC723D81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E97362A9-3F28-4663-9F57-D6A7017708D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E97362A9-3F28-4663-9F57-D6A7017708D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E97362A9-3F28-4663-9F57-D6A7017708D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E97362A9-3F28-4663-9F57-D6A7017708D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6B753B0-2460-41DF-A5ED-972CF9A4E632}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6B753B0-2460-41DF-A5ED-972CF9A4E632}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6B753B0-2460-41DF-A5ED-972CF9A4E632}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6B753B0-2460-41DF-A5ED-972CF9A4E632}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F190931-EEBB-454C-8AC8-56B048D251B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F190931-EEBB-454C-8AC8-56B048D251B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F190931-EEBB-454C-8AC8-56B048D251B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F190931-EEBB-454C-8AC8-56B048D251B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A37BF6-927C-4BCE-AF1A-21941E067153}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A37BF6-927C-4BCE-AF1A-21941E067153}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A37BF6-927C-4BCE-AF1A-21941E067153}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A37BF6-927C-4BCE-AF1A-21941E067153}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
