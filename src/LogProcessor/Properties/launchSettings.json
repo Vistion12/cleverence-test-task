@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "LogProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Vistion2\\Desktop\\CleverenceSoft\\src\\LogProcessor\\bin\\Debug\\net8.0\\input.log\" \"C:\\Users\\Vistion2\\Desktop\\CleverenceSoft\\src\\LogProcessor\\bin\\Debug\\net8.0\\output.log\" \"C:\\Users\\Vistion2\\Desktop\\CleverenceSoft\\src\\LogProcessor\\bin\\Debug\\net8.0\\problems.txt\""
+    }
+  }
+}

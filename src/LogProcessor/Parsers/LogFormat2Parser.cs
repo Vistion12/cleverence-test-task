@@ -1,10 +1,13 @@
-﻿using LogProcessor.Abstractions;
+﻿using System.Globalization;
+using LogProcessor.Abstractions;
 using LogProcessor.Models;
 
 namespace LogProcessor.Parsers;
 
 public class LogFormat2Parser : ILogParser
 {
+    private const string SourceDateFormat = "yyyy-MM-dd";
+
     public bool TryParse(string line, out LogEntry? entry)
     {
         entry = null;
@@ -42,7 +45,7 @@ public class LogFormat2Parser : ILogParser
 
         entry = new LogEntry
         {
-            Date = date,
+            Date = ConvertDate(date, SourceDateFormat),
             Time = time,
             Level = NormalizeLevel(level),
             Method = string.IsNullOrWhiteSpace(method) ? "DEFAULT" : method,
@@ -54,12 +57,12 @@ public class LogFormat2Parser : ILogParser
 
     private static bool IsValidDate(string date)
     {
-        return DateTime.TryParseExact(date, "yyyy-MM-dd", null, System.Globalization.DateTimeStyles.None, out _);
+        return DateTime.TryParseExact(date, SourceDateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out _);
     }
 
     private static bool IsValidTime(string time)
     {
-        return DateTime.TryParseExact(time, "HH:mm:ss.ffff", null, System.Globalization.DateTimeStyles.None, out _);
+        return DateTime.TryParseExact(time, "HH:mm:ss.ffff", CultureInfo.InvariantCulture, DateTimeStyles.None, out _);
     }
 
     private static bool IsValidLevel(string level)
@@ -75,5 +78,11 @@ public class LogFormat2Parser : ILogParser
             "WARNING" => "WARN",
             _ => level
         };
+    }
+
+    private static string ConvertDate(string date, string sourceFormat)
+    {
+        var parsed = DateTime.ParseExact(date, sourceFormat, CultureInfo.InvariantCulture);
+        return parsed.ToString("dd-MM-yyyy", CultureInfo.InvariantCulture);
     }
 }
